@@ -3,6 +3,9 @@ import React from 'react';
 
 const Block = (props) => {
     /* TODO */
+    const posts = {
+        background: props.color
+    }
 
     return (
         // ignore this data-testid, it's purely for testing :)
@@ -11,8 +14,10 @@ const Block = (props) => {
             we took care of the basic block styling! 
             If curious, check out the css in Styles/Block.css */}
             {/* Refer to hint if stuck on how to color the posts */}
-            <div className="post"></div>
-            <div className="caption"></div>
+            <div className="post" style={posts}></div>
+            <div className="caption">
+                <p>{props.color}</p>
+            </div>
         </div>
     );
 }
